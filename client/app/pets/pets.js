@@ -5,7 +5,8 @@ angular.module('petfinder.pets', [])
   $scope.data = {};
 
   $scope.searchPets = function () {
-    Pets.getPets()
+    // console.log('$scope.pets', $scope.pets);
+    Pets.getPets($scope.pets)
     .then(function (pets) {
       $scope.data.pets = pets;
     })

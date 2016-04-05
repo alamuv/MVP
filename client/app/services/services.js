@@ -2,10 +2,12 @@ angular.module('petfinder.services', [])
 
 .factory('Pets', function ($http) {
 
-  var getPets = function () {
+  var getPets = function (query) {
+    console.log('query', query);
     return $http({
       method: 'GET',
-      url: '/api/adopt'
+      url: '/api/adopt',
+      params: query
     })
     .then(function (resp) {
       console.log(resp.data);

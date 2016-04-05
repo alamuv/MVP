@@ -18,9 +18,9 @@ var seedData = function(data) {
 module.exports = {
   
   searchPets: function (req, res, next) {
-    console.log('In search pets');
-    seedData(petsData);
-    findAllPets ({})
+    console.log('In search pets', req.query);
+    // seedData(petsData);
+    findAllPets ({species: req.query.species})
     .then(function (pets) {
       res.json(pets);
     })

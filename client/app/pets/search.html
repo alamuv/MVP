@@ -5,21 +5,21 @@
           <a class='selected' href="#/adopt">Adopt a Pet</a>
       </li>
       <li>
-          <a href="#/shelter">Find a shelter home</a>
+            <a href="#/shelter">Find a shelter home</a>
       </li>
     </ul>
   </nav>
-  <div class="search">
+  <div  class="search">
     <form name='searchForm' ng-submit="searchPets()" novalidate>
       <label for="Animal"> Animal: </label><br>
-      <select name="pets" ng-model="pets.animal">
-        <option value="dog">Dog</option>
-        <option value="cat">Cat</option>
+      <select name="pets" ng-model="pets.species">
+        <option value="Dog">Dog</option>
+        <option value="Cat">Cat</option>
       </select><br>
 
       <label for="Location"> Location: </label><br>
       <input name='pets' type="text"
-      ng-model="pets.zip"
+      ng-model="pets.location"
       placeholder="Enter zipcode" required
       ng-class="{'error': searchForm.$invalid}"/>
 
@@ -30,11 +30,11 @@
   </div>
   <div class="pets">
     <div class="pet"
-        ng-repeat="pet in data.links">
+        ng-repeat="pet in data.pets">
       <img class="image" src="{{pet.imgUrl}}">
       <div class="info">
         <span class="name">{{ pet.name }}</span>
-        <div class="breed">{{ pet.breed }}</div>
+        <!-- <div class="breed">{{ pet.breed }}</div> -->
         <div class="location">{{ pet.location }}</div>
         <!-- <a href="{{ link.baseUrl }}/{{ link.code }}">{{ link.baseUrl }}/{{ link.code }}</a> -->
       </div>
