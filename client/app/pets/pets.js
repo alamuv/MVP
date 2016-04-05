@@ -1,6 +1,6 @@
 angular.module('petfinder.pets', [])
 
-.controller('PetsController', function($scope, Pets) {
+.controller('PetsController', function($scope, $location, Pets) {
 
   $scope.data = {};
 

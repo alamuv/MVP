@@ -7,7 +7,7 @@ var petSchema = new mongoose.Schema({
   location: String,
   sex: String,
   color: String,
-  org_id: Number
+  rescuegrp: String
 });
 
 module.exports = mongoose.model('Pet', petSchema);

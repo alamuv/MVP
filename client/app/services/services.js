@@ -5,14 +5,24 @@ angular.module('petfinder.services', [])
   var getPets = function () {
     return $http({
       method: 'GET',
-      url: '/api/pets'
+      url: '/api/adopt'
     })
     .then(function (resp) {
+      console.log(resp.data);
       return resp.data;
     });
   };
 
+  var addPet = function (pet) {
+    return $http({
+      method: 'POST',
+      url: '/api/shelter',
+      data: pet
+    });
+  };
+
   return {
-    getPets: getPets
+    getPets: getPets,
+    addPet: addPet
   };
 });
