@@ -31,11 +31,12 @@
   <div class="pets">
     <div class="pet"
         ng-repeat="pet in data.pets">
-      <img class="image" src="{{pet.imgUrl}}">
+      <img class="image" src="{{pet.thumbnailUrl}}">
       <div class="info">
         <span class="name">{{ pet.name }}</span>
-        <!-- <div class="breed">{{ pet.breed }}</div> -->
+        <div class="breed">{{ pet.breed }}</div>
         <div class="location">{{ pet.location }}</div>
+        <div class="rescue-grp">{{ pet.rescuegrp }}</div>
         <!-- <a href="{{ link.baseUrl }}/{{ link.code }}">{{ link.baseUrl }}/{{ link.code }}</a> -->
       </div>
     </div>
