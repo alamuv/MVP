@@ -5,51 +5,79 @@
           <a href="#/adopt">Adopt a Pet</a>
       </li>
       <li>
-          <a class='selected' href="#/shelter">Find a shelter home</a>
+          <a class='selected' href="#/shelter">Add a New Pet</a>
       </li>
     </ul>
   </nav>
-  <div class="search">
-    <form name='searchForm' ng-submit="addPet()" novalidate>
-      <label for="Animal"> Animal: </label>
-      <select name="pets" ng-model="pet.species">
-        <option value="dog">Dog</option>
-        <option value="cat">Cat</option>
-      </select><br>
+  <div class="search col-sm-4 col-sm-offset-2 center-block">
+    <form class="form-horizontal" name='searchForm' ng-submit="addPet()" novalidate>
+      <div class="form-group">
+        <label for="Animal" class="col-sm-2"> Animal </label>
+        <select name="pets" ng-model="pet.species">
+          <option value="Dog">Dog</option>
+          <option value="Cat">Cat</option>
+        </select><br>
+      </div>
 
-      <label for="Name"> Name: </label>
-      <input name='pets' type="text"
-      ng-model="pet.name"
-      placeholder="Enter name" required
-      ng-class="{'error': searchForm.$invalid}"/><br>
+      <div class="form-group">  
+        <label for="Name" class="col-sm-2"> Name </label>
+        <input name='pets' type="text"
+        ng-model="pet.name"
+        placeholder="Name" required
+        ng-class="{'error': searchForm.$invalid}"/><br>
+      </div>
 
-      <label for="Sex"> Sex: </label>
-      <input name='pets' type="text"
-      ng-model="pet.sex"
-      placeholder="Enter sex" required
-      ng-class="{'error': searchForm.$invalid}"/><br>
+      <div class="form-group">
+        <label for="Breed" class="col-sm-2"> Breed </label>
+        <input name='pets' type="text"
+        ng-model="pet.breed"
+        placeholder="Breed" required
+        ng-class="{'error': searchForm.$invalid}"/><br>
+      </div>
 
-      <label for="Location"> Location: </label>
-      <input name='pets' type="text"
-      ng-model="pet.zip"
-      placeholder="Enter zipcode" required
-      ng-class="{'error': searchForm.$invalid}"/><br>
+      <div class="form-group">
+        <label for="Sex" class="col-sm-2"> Sex </label>
+        <input name='pets' type="text"
+        ng-model="pet.sex"
+        placeholder="sex" required
+        ng-class="{'error': searchForm.$invalid}"/><br>
+      </div>
 
-      <label for="Image Url"> Image Url: </label>
-      <input name='pets' type="text"
-      ng-model="pet.imgUrl"
-      placeholder="Enter imgUrl" required
-      ng-class="{'error': searchForm.$invalid}"/><br>
+      <div class="form-group">
+        <label for="Location" class="col-sm-2"> Location </label>
+        <input name='pets' type="text"
+        ng-model="pet.location"
+        placeholder="Zipcode" required
+        ng-class="{'error': searchForm.$invalid}"/><br>
+      </div>
 
-      <label for="Rescue Group"> Rescue Group: </label>
-      <input name='pets' type="text"
-      ng-model="pet.rescuegrp"
-      placeholder="Enter rescuegrp" required
-      ng-class="{'error': searchForm.$invalid}"/><br>
+      <div class="form-group">
+        <label for="Image Url" class="col-sm-2"> Image Url </label>
+        <input name='pets' type="text"
+        ng-model="pet.imgUrl"
+        placeholder="imgUrl" required
+        ng-class="{'error': searchForm.$invalid}"/><br>
+      </div>
 
-      <button type="submit" value="search" ng-disabled='shortlyForm.$invalid'>
+      <div class="form-group">
+        <label for="Rescue Group" class="col-sm-2"> Rescue Group </label>
+        <input name='pets' type="text"
+        ng-model="pet.rescuegrp"
+        placeholder="Enter rescuegrp" required
+        ng-class="{'error': searchForm.$invalid}"/><br>
+      </div>
+
+      <button type="submit" class="btn btn-default" value="search" ng-disabled='shortlyForm.$invalid'>
         submit
       </button>
     </form>
+  </div>
+  <div class="pet col-md-4">
+    <img class="image .img-responsive" src="{{pet.imgUrl}}" >
+    <div class="info">
+      <span class="name">{{pet.name}}</span>
+      <div class="breed">{{ pet.breed }}</div>
+      <div class="rescue-grp">{{ pet.rescuegrp }}</div>
+    </div>
   </div>
 </div>

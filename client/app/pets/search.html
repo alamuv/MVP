@@ -5,37 +5,43 @@
           <a class='selected' href="#/adopt">Adopt a Pet</a>
       </li>
       <li>
-            <a href="#/shelter">Find a shelter home</a>
+            <a href="#/shelter">Add a New Pet</a>
       </li>
     </ul>
   </nav>
   <div  class="search">
     <form name='searchForm' ng-submit="searchPets()" novalidate>
-      <label for="Animal"> Animal: </label><br>
-      <select name="pets" ng-model="pets.species">
-        <option value="Dog">Dog</option>
-        <option value="Cat">Cat</option>
-      </select><br>
 
-      <label for="Location"> Location: </label><br>
-      <input name='pets' type="text"
-      ng-model="pets.location"
-      placeholder="Enter zipcode" required
-      ng-class="{'error': searchForm.$invalid}"/>
+      <div class="form-group">
+        <label for="Animal" class="col-sm-2"> Animal </label>
+        <select name="pets" ng-model="pets.species">
+          <option value="Dog">Dog</option>
+          <option value="Cat">Cat</option>
+        </select><br>
+      </div>
 
-      <button type="submit" value="search" ng-disabled='shortlyForm.$invalid'>
+      <div class="form-group">
+        <label for="Location" class="col-sm-2">Location</label>
+        <input name='pets' type="text"
+        ng-model="pets.location"
+        placeholder="Enter zipcode" required
+        ng-class="{'error': searchForm.$invalid}"/>
+      </div>
+
+      <button type="submit" class="btn btn-default" value="search" ng-disabled='shortlyForm.$invalid'>
         search
       </button>
     </form>
   </div>
-  <div class="pets">
-    <div class="pet"
+  <div class="pets row">
+    <div class="pet col-xs-6 col-md-3"
         ng-repeat="pet in data.pets">
-      <img class="image" src="{{pet.thumbnailUrl}}">
+      <a href="#" class="thumbnail">
+        <img class="image .img-responsive img-thumbnail" src="{{pet.imgUrl}}" >
+      </a>
       <div class="info">
         <span class="name">{{ pet.name }}</span>
         <div class="breed">{{ pet.breed }}</div>
-        <div class="location">{{ pet.location }}</div>
         <div class="rescue-grp">{{ pet.rescuegrp }}</div>
         <!-- <a href="{{ link.baseUrl }}/{{ link.code }}">{{ link.baseUrl }}/{{ link.code }}</a> -->
       </div>

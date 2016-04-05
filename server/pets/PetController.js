@@ -9,18 +9,19 @@ var findPet = Q.nbind(Pet.findOne, Pet);
 var seedData = function(data) {
   Pet.create(data, function(err, newPet){
     if(err) {
-      return res.json(err);
+      console.error(err);
     }
     return newPet;
   });
 };
 
+seedData(petsData);
+
 module.exports = {
   
   searchPets: function (req, res, next) {
     console.log('In search pets', req.query);
-    // seedData(petsData);
-    findAllPets ({species: req.query.species})
+    findAllPets ({species: req.query.species, location: req.query.location})
     .then(function (pets) {
       res.json(pets);
     })
@@ -31,6 +32,7 @@ module.exports = {
 
   addPet: function (req, res, next) {
     var name = req.body.name;
+    var breed = req.body.breed;
     var species = req.body.species;
     var sex = req.body.sex;
     var imgUrl = req.body.imgUrl;
@@ -57,6 +59,7 @@ module.exports = {
       .then(function (pet) {
         // create token to send back for auth
         console.log('Pet created');
+        res.json(pet);
       })
       .fail(function (error) {
         next(error);

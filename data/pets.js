@@ -6,7 +6,7 @@ var pets = [
     "location": "95127",
     "sex": "Male",
     "color": "Black and White",
-    rescuegrp: "Support Team Animal Rescue, San Jose"
+    "rescuegrp": "Support Team Animal Rescue, San Jose"
   },
   {
     "name": "Jude",
@@ -16,16 +16,17 @@ var pets = [
     "location": "95127",
     "sex": "Female",
     "color": "Brown",
-    rescuegrp: "Support Team Animal Rescue, San Jose"
+    "rescuegrp": "Support Team Animal Rescue, San Jose"
   },
   {
     "name": "Oliver",
     "species": "Cat",
-    "imgUrl": "https://s3.amazonaws.com/filestore.rescuegroups.org/2773/pictures/animals/2630/2630568/6648612_500x375.jpg", 
+    "imgUrl": "https://s3.amazonaws.com/filestore.rescuegroups.org/4853/pictures/animals/5905/5905337/16853069_256x319.jpg",
+    "thumbnailUrl": "https://s3.amazonaws.com/filestore.rescuegroups.org/4853/pictures/animals/5905/5905337/16853069_100x124.jpg", 
     "location": "77354",
     "sex": "Male",
-    "color": "Black and White",
-    rescuegrp: "Tomball SOS, Magnolia, TX"
+    "color": "Gray",
+    "rescuegrp": "Tomball SOS, Magnolia, TX"
   },
   {
     "name": "Buster",
@@ -36,7 +37,7 @@ var pets = [
     "location": "77354",
     "sex": "Male",
     "color": "Brindle with White",
-    rescuegrp: "Tomball SOS, Magnolia, TX"
+    "rescuegrp": "Tomball SOS, Magnolia, TX"
   },
   {
     "name": "Betty",
@@ -47,7 +48,7 @@ var pets = [
     "location": "77354",
     "sex": "Female",
     "color": "Gray",
-    rescuegrp: "Tomball SOS, Magnolia, TX"
+    "rescuegrp": "Tomball SOS, Magnolia, TX"
   },
   {
     "name": "Godiva",
@@ -58,7 +59,7 @@ var pets = [
     "location": "95127",
     "sex": "Female",
     "color": "Brown/Chocolate",
-    rescuegrp: "Support Team Animal Rescue, San Jose"
+    "rescuegrp": "Support Team Animal Rescue, San Jose"
   },
   {
     "name": "Coretta",
@@ -69,7 +70,7 @@ var pets = [
     "location": "95127",
     "sex": "Female",
     "color": "Brown",
-    rescuegrp: "Support Team Animal Rescue, San Jose"
+    "rescuegrp": "Support Team Animal Rescue, San Jose"
   }
 ];
 

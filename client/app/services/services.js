@@ -20,6 +20,10 @@ angular.module('petfinder.services', [])
       method: 'POST',
       url: '/api/shelter',
       data: pet
+    })
+    .then(function (resp) {
+      console.log(resp.data);
+      return resp.data;
     });
   };
 
