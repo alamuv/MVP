@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app='petfinder'>
+  <head>
+    <meta charset="utf-8" />
+    <title>Pet Finder</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">  
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+  </head>
+  <body>
+    <h1>Find Your Pet</h1>
+
+    <!-- the ng-view directive is where our templates will be loaded into when naviagted to -->
+    <div ng-view></div>
+
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-route/angular-route.js"></script>
+
+    <script src="app/pets/pets.js"></script>
+ <!--    <script src="app/links/links.js"></script>
+    <script src="app/shorten/shorten.js"></script> -->
+    <script src="app/services/services.js"></script>
+    <script src="app/app.js"></script>
+  </body>
+</html>

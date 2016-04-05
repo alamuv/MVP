@@ -1,0 +1,29 @@
+{
+  "name": "petFinder",
+  "version": "1.1.0",
+  "description": "Build out the front end of a MEAN stack app",
+  "author": "Alamu <alam.palaniappan@gmail.com>",
+  "contributors": [
+    "Alamu Palaniappan"
+  ],
+  "scripts": {
+    "lint": "eslint ./"
+  },
+  "license": "UNLICENSED",
+  "private": true,
+  "devDependencies": {
+    "browser-sync": "^1.5.7",
+    "clone-stats": "0.0.1",
+    "eslint-config-hackreactor": "git://github.com/hackreactor-labs/eslint-config-hackreactor"
+  },
+  "dependencies": {
+    "body-parser": "^1.4.3",
+    "express": "^4.4.5",
+    "jwt-simple": "^0.2.0",
+    "mongoose": "^4.1.0",
+    "morgan": "^1.1.1",
+    "q": "^1.4.1",
+    "request": "^2.36.0"
+  }
+}
+

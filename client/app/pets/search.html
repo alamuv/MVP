@@ -1,0 +1,33 @@
+<div id='container'>  
+  <div class="search">
+    <form name='searchForm' ng-submit="searchPets()" novalidate>
+      <label for="Animal"> Animal: </label><br>
+      <select name="pets" ng-model="pets.animal">
+        <option value="dog">Dog</option>
+        <option value="cat">Cat</option>
+      </select><br>
+
+      <label for="Location"> Location: </label><br>
+      <input name='pets' type="text"
+      ng-model="pets.zip"
+      placeholder="Enter zipcode" required
+      ng-class="{'error': searchForm.$invalid}"/>
+
+      <button type="submit" value="search" ng-disabled='shortlyForm.$invalid'>
+        search
+      </button>
+    </form>
+  </div>
+  <div class="pets">
+    <div class="pet"
+        ng-repeat="pet in data.links">
+      <img class="image" src="{{pet.imgUrl}}">
+      <div class="info">
+        <span class="name">{{ pet.name }}</span>
+        <div class="breed">{{ pet.breed }}</div>
+        <div class="location">{{ pet.location }}</div>
+        <!-- <a href="{{ link.baseUrl }}/{{ link.code }}">{{ link.baseUrl }}/{{ link.code }}</a> -->
+      </div>
+    </div>
+  </div>
+</div>
